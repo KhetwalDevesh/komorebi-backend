@@ -1,0 +1,26 @@
+{
+	"name": "ecommerce-backend",
+	"version": "1.0.0",
+	"main": "index.js",
+	"author": "khetwal_devesh",
+	"license": "MIT",
+	"scripts": {
+		"build": "tsc -p tsconfig.json",
+		"start": "node ./dist/server.js",
+		"dev": "nodemon --exec ts-node src/server.ts"
+	},
+	"dependencies": {
+		"cors": "^2.8.5",
+		"dotenv": "^16.0.3",
+		"express": "^4.18.2",
+		"mongoose": "^7.0.3",
+		"nodemon": "^2.0.22",
+		"stripe": "^12.0.0"
+	},
+	"devDependencies": {
+		"@types/express": "^4.17.17",
+		"@types/node": "^18.15.11",
+		"ts-node": "^10.9.1",
+		"typescript": "^5.0.3"
+	}
+}
