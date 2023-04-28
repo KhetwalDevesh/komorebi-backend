@@ -1,9 +1,9 @@
 import { Request, Response } from "express";
 import { IOrder, IOrderItem } from "../types";
 import Order from "../models/order";
-import stripe from "stripe";
+import stripe, { Stripe } from "stripe";
 
-const stripeClient = new stripe(`${process.env.STRIPE_SECRET_KEY}`, {
+const stripeClient = new Stripe(`${process.env.STRIPE_SECRET_KEY}`, {
 	apiVersion: "2022-11-15",
 });
 
