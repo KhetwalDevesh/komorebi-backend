@@ -5,10 +5,11 @@ import connectToDatabase from "./db";
 import productRoutes from "./routes/product";
 import orderRoutes from "./routes/order";
 import { webhookHandler } from "./webhook";
+import cors from "cors";
 const app = express();
 
 connectToDatabase();
-
+app.use(cors());
 app.get("/ping", (request, response) => {
 	response.send("pong");
 });
