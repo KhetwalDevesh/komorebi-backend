@@ -51,3 +51,19 @@ export const getProductById = async (request: Request, response: Response) => {
 		throw error;
 	}
 };
+
+export const deleteAllProducts = async (
+	request: Request,
+	response: Response
+) => {
+	try {
+		await Product.deleteMany({});
+		response.send("All products deleted successfully");
+	} catch (error) {
+		console.log(error);
+		response.send({
+			message: "Something went wrong while fetching the product",
+		});
+		throw error;
+	}
+};
