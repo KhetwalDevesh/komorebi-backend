@@ -32,7 +32,7 @@ export const createOrder = async (request: Request, response: Response) => {
 			amount: totalAmount,
 			currency: "inr",
 		});
-
+		// console.log("request.body", JSON.stringify(request.body, null, 2));
 		const order = await Order.create({
 			user,
 			deliveryAddress,
